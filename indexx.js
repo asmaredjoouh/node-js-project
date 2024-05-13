@@ -126,11 +126,11 @@ app.get("/articles/:articleId", async (req, res) => {
 /*== localhost:3000/articles/663f34c28886505fa3fd6aa6  ==*/
 
 app.delete("/articles/:articleId", async (req, res) => {
-	const id = req.params.articleId;
+	const id = req.params.articleId;    //id
 
 	try {
-		const article = await Article.findByIdAndDelete(id);
-		res.json(article);
+		const article = await Article.findByIdAndDelete(id);  // get article wahda
+		res.json(article);   //kitjibo dirlo res de jeson
 		return;
 
 	} catch (error) {
@@ -140,10 +140,10 @@ app.delete("/articles/:articleId", async (req, res) => {
 });
 
 //================ get("/showArticles ========================================================================/
-//find all article
+
 
 app.get("/showArticles", async (req, res) => {
-	const articles = await Article.find();
+	const articles = await Article.find();   //find all article
 
 	res.render("articles.ejs", {
 		allArticles: articles,
