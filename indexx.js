@@ -38,7 +38,7 @@ app.get("/hello", function(req, res){
 
 app.get("/", function(req, res){
    // send response
-   res.send("hello in node js project..");
+   res.send("hello in node js project");
 })
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
